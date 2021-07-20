@@ -1,14 +1,16 @@
-import AboutUs from "./pages/AboutUs";
+import AboutUs from "./pages/AboutUs"
+import Nav from "./components/Nav"
 //global style
-import GlobalStyle from "./components/GlobalStyle";
+import GlobalStyle from "./components/GlobalStyle"
 
 function App() {
-  return (
-    <div className="App">
-      <GlobalStyle />
-      <AboutUs />
-    </div>
-  );
+	return (
+		<div className='App'>
+			<GlobalStyle />
+			<Nav />
+			<AboutUs />
+		</div>
+	)
 }
 
-export default App;
+export default App
