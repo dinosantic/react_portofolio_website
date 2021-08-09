@@ -5,6 +5,9 @@ import styled from "styled-components";
 import { About, Description, Hide, Image } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
+import { titleAnim, fade, photoAnim } from "../animation";
+//
+import Wave from "./Wave";
 
 const AboutSection = () => {
   return (
@@ -12,23 +15,26 @@ const AboutSection = () => {
       <Description>
         <motion.div className="title">
           <Hide>
-            <motion.h2>We work to make</motion.h2>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>
+            <motion.h2 variants={titleAnim}>
               your <span>dreams</span> come
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>true.</motion.h2>
+            <motion.h2 variants={titleAnim}>true.</motion.h2>
           </Hide>
         </motion.div>
-        <p>Contact us for photograpy and videography.</p>
-        <button>Contact us</button>
+        <motion.p variants={fade}>
+          Contact us for photograpy and videography.
+        </motion.p>
+        <motion.button variants={fade}>Contact us</motion.button>
       </Description>
       <Image>
-        <img src={home1} alt="guy with a camera" />
+        <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />
       </Image>
+      <Wave />
     </About>
   );
 };
