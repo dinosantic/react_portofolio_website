@@ -14,9 +14,13 @@ import {
   fade,
   slider,
   sliderContainer,
+  scrollReveal,
 } from "../animation";
+import { UseScroll } from "../components/UseScroll";
 
 const OurWork = () => {
+  const [element, controls] = UseScroll();
+  const [element2, controls2] = UseScroll();
   return (
     <Work
       style={{ background: "#fff" }}
@@ -39,18 +43,26 @@ const OurWork = () => {
           </ImageWrapper>
         </Link>
       </Movie>
-      <Movie>
+      <Movie
+        variants={scrollReveal}
+        ref={element}
+        animate={controls}
+        initial="hidden">
         <h2>The Racer</h2>
-        <div className="line"></div>
+        <motion.div className="line" variants={lineAnim}></motion.div>
         <Link to="/work/the-racer">
           <ImageWrapper>
             <img src={theracer} variants={photoAnim} alt="theracer" />
           </ImageWrapper>
         </Link>
       </Movie>
-      <Movie>
+      <Movie
+        variants={scrollReveal}
+        ref={element2}
+        animate={controls2}
+        initial="hidden">
         <h2>Good Times</h2>
-        <div className="line"></div>
+        <motion.div className="line" variants={lineAnim}></motion.div>
         <Link to="/work/good-times">
           <ImageWrapper>
             <img src={goodtimes} variants={photoAnim} alt="goodtimes" />
@@ -69,7 +81,7 @@ const Work = styled(motion.div)`
     padding: 1rem 0rem;
   }
 `;
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
