@@ -7,6 +7,8 @@ import { Description } from "../styles";
 //Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
+//location
+import ScrollTop from "../components/ScrollTop";
 
 const MovieDetails = () => {
   const history = useHistory();
@@ -21,6 +23,7 @@ const MovieDetails = () => {
   }, [movies, url]);
   return (
     <>
+      <ScrollTop />
       {movie && (
         <Details
           exit="exit"

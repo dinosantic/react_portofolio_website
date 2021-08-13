@@ -17,6 +17,8 @@ import {
   scrollReveal,
 } from "../animation";
 import { UseScroll } from "../components/UseScroll";
+//location
+import ScrollTop from "../components/ScrollTop";
 
 const OurWork = () => {
   const [element, controls] = UseScroll();
@@ -28,6 +30,7 @@ const OurWork = () => {
       variants={pageAnimation}
       initial="hidden"
       animate="show">
+      <ScrollTop />
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider} />
         <Frame2 variants={slider} />
