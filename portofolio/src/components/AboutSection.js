@@ -6,7 +6,7 @@ import { About, Description, Hide, Image } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
-//
+//svg line
 import Wave from "./Wave";
 
 const AboutSection = () => {

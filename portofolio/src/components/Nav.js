@@ -42,15 +42,28 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     list-style: none;
+    li {
+      padding-left: 10rem;
+      position: relative;
+    }
   }
   #logo {
     font-size: 1.5rem;
     font-family: "Lobster", cursive;
     font-weight: lighter;
   }
-  li {
-    padding-left: 10rem;
-    position: relative;
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    padding: 2rem 0;
+    ul {
+      padding: 2rem;
+      justify-content: space-around;
+      width: 100%;
+      li {
+        padding-left: 0;
+      }
+    }
   }
 `;
 export default Nav;

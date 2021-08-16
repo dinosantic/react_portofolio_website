@@ -76,6 +76,11 @@ const Awards = styled.div`
   margin: 5rem;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    margin: 2rem;
+    align-items: baseline;
+  }
 `;
 const ImageDisplay = styled.div`
   min-height: 50vh;
@@ -108,6 +113,9 @@ const StyledAward = styled.div`
   }
   p {
     padding: 2rem 0;
+  }
+  @media (max-width: 1024px) {
+    padding: 0;
   }
 `;
 export default MovieDetails;
