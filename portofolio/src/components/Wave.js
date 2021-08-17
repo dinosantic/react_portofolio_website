@@ -30,4 +30,10 @@ const WaveSvg = styled.svg`
   @media (max-width: 1300px) {
     top: 10%;
   }
+  @media (max-width: 1024px) {
+    top: 15%;
+  }
+  @media (max-width: 767px) {
+    top: 25%;
+  }
 `;
